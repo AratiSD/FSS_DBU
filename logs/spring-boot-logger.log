@@ -1,0 +1,92 @@
+[11:57:01.648][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.4.1 with PID 2092 (C:\Users\kkale\Desktop\AEPS\All Banks\DBU_switch_migration\DBU_switch\target\classes started by kkale in C:\Users\kkale\Desktop\AEPS\All Banks\DBU_switch_migration\DBU_switch)
+[11:57:01.656][0001] o.s.b.SpringApplication.logStartupProfileInfo(630) No active profile set, falling back to 1 default profile: "default"
+[11:57:02.407][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[11:57:02.494][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 73 ms. Found 3 JPA repository interfaces.
+[11:57:02.770][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[11:57:02.808][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[11:57:03.183][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[11:57:03.196][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[11:57:03.198][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[11:57:03.199][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[11:57:03.355][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[11:57:03.358][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 1601 ms
+[11:57:03.609][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[11:57:09.785][0001] c.z.h.p.HikariPool.throwPoolInitializationException(594) oracle - Exception during pool initialization.
+java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection (CONNECTION_ID=ypefygmnSgWkqo8Zo2Wdow==)
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:902)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:707)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1088)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:89)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:732)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:648)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330)
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:166)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider.getDefaultDdlAuto(HibernateDefaultDdlAutoProvider.java:42)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.lambda$getVendorProperties$1(HibernateJpaConfiguration.java:129)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:118)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:87)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:80)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:131)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:131)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:640)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.fss.saber.adapter.Application.main(Application.java:16)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection (CONNECTION_ID=ypefygmnSgWkqo8Zo2Wdow==)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:694)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:584)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:938)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:349)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:2628)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:666)
+	... 49 common frames omitted
+Caused by: java.io.IOException: Socket read timed out, socket connect lapse 5016 ms. 10.44.120.45 1521  5000 (1/1) true
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:403)
+	at oracle.net.nt.TcpNTAdapter.doLocalDNSLookupConnect(TcpNTAdapter.java:307)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:269)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:243)
+	at oracle.net.nt.ConnStrategy.executeConnOption(ConnStrategy.java:980)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:655)
+	... 54 common frames omitted
+Caused by: oracle.net.nt.TimeoutInterruptHandler$IOReadTimeoutException: Socket read timed out
+	at oracle.net.nt.TimeoutSocketChannel.handleInterrupt(TimeoutSocketChannel.java:543)
+	at oracle.net.nt.TimeoutSocketChannel.connect(TimeoutSocketChannel.java:196)
+	at oracle.net.nt.TimeoutSocketChannel.<init>(TimeoutSocketChannel.java:157)
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:384)
+	... 59 common frames omitted
+[11:57:09.839][0001] o.h.j.i.u.LogHelper.logPersistenceUnitInformation(31) HHH000204: Processing PersistenceUnitInfo [name: default]
+[11:57:09.890][0001] o.h.Version.logVersion(44) HHH000412: Hibernate ORM core version 6.1.5.Final
+[11:57:10.042][0001] o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl.lambda$new$1(626) HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[11:57:10.153][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...

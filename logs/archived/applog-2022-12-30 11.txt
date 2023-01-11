@@ -1,0 +1,1849 @@
+[15:16:17.684][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 18712 (D:\Workspaces\FSS\DBU_switch\target\classes started by X in D:\Workspaces\FSS\DBU_switch)
+[15:16:17.690][0001] o.s.b.SpringApplication.logStartupProfileInfo(630) No active profile set, falling back to 1 default profile: "default"
+[15:16:19.293][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:16:19.394][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 86 ms. Found 2 JPA repository interfaces.
+[15:16:19.759][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:16:19.803][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[15:16:20.409][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[15:16:20.423][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[15:16:20.424][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[15:16:20.425][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[15:16:20.679][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[15:16:20.685][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 2915 ms
+[15:16:21.017][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:16:27.230][0001] c.z.h.p.HikariPool.throwPoolInitializationException(594) oracle - Exception during pool initialization.
+java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection (CONNECTION_ID=LbV8HdY/RASdqPeNkkOoMQ==)
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:902)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:707)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1088)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:89)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:732)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:648)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330)
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:166)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider.getDefaultDdlAuto(HibernateDefaultDdlAutoProvider.java:42)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.lambda$getVendorProperties$1(HibernateJpaConfiguration.java:129)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:118)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:87)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:80)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:131)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:131)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:640)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.fss.saber.adapter.Application.main(Application.java:16)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection (CONNECTION_ID=LbV8HdY/RASdqPeNkkOoMQ==)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:694)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:584)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:938)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:349)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:2628)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:666)
+	... 49 common frames omitted
+Caused by: java.io.IOException: Socket read timed out, socket connect lapse 5012 ms. 10.44.120.45 1521  5000 (1/1) true
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:403)
+	at oracle.net.nt.TcpNTAdapter.doLocalDNSLookupConnect(TcpNTAdapter.java:307)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:269)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:243)
+	at oracle.net.nt.ConnStrategy.executeConnOption(ConnStrategy.java:980)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:655)
+	... 54 common frames omitted
+Caused by: oracle.net.nt.TimeoutInterruptHandler$IOReadTimeoutException: Socket read timed out
+	at oracle.net.nt.TimeoutSocketChannel.handleInterrupt(TimeoutSocketChannel.java:543)
+	at oracle.net.nt.TimeoutSocketChannel.connect(TimeoutSocketChannel.java:196)
+	at oracle.net.nt.TimeoutSocketChannel.<init>(TimeoutSocketChannel.java:157)
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:384)
+	... 59 common frames omitted
+[15:16:27.342][0001] o.h.j.i.u.LogHelper.logPersistenceUnitInformation(31) HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:16:27.466][0001] o.h.Version.logVersion(44) HHH000412: Hibernate ORM core version 6.1.5.Final
+[15:16:27.675][0001] o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl.lambda$new$1(626) HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[15:16:27.825][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:16:33.851][0001] c.z.h.p.HikariPool.throwPoolInitializationException(594) oracle - Exception during pool initialization.
+java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection (CONNECTION_ID=Ez4nc8PBQLqhmEZShsjseg==)
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:902)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:707)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1088)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:89)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:732)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:648)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1350)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1421)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.fss.saber.adapter.Application.main(Application.java:16)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection (CONNECTION_ID=Ez4nc8PBQLqhmEZShsjseg==)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:694)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:584)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:938)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:349)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:2628)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:666)
+	... 48 common frames omitted
+Caused by: java.io.IOException: Socket read timed out, socket connect lapse 5008 ms. 10.44.120.45 1521  5000 (1/1) true
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:403)
+	at oracle.net.nt.TcpNTAdapter.doLocalDNSLookupConnect(TcpNTAdapter.java:307)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:269)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:243)
+	at oracle.net.nt.ConnStrategy.executeConnOption(ConnStrategy.java:980)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:655)
+	... 53 common frames omitted
+Caused by: oracle.net.nt.TimeoutInterruptHandler$IOReadTimeoutException: Socket read timed out
+	at oracle.net.nt.TimeoutSocketChannel.handleInterrupt(TimeoutSocketChannel.java:543)
+	at oracle.net.nt.TimeoutSocketChannel.connect(TimeoutSocketChannel.java:196)
+	at oracle.net.nt.TimeoutSocketChannel.<init>(TimeoutSocketChannel.java:157)
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:384)
+	... 58 common frames omitted
+[15:16:33.856][0001] o.h.e.j.e.i.JdbcEnvironmentInitiator.initiateService(239) HHH000342: Could not obtain connection to query metadata
+java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection (CONNECTION_ID=Ez4nc8PBQLqhmEZShsjseg==)
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:902)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:707)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1088)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:89)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:732)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:648)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1350)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1421)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.fss.saber.adapter.Application.main(Application.java:16)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection (CONNECTION_ID=Ez4nc8PBQLqhmEZShsjseg==)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:694)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:584)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:938)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:349)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:2628)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:666)
+	... 48 common frames omitted
+Caused by: java.io.IOException: Socket read timed out, socket connect lapse 5008 ms. 10.44.120.45 1521  5000 (1/1) true
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:403)
+	at oracle.net.nt.TcpNTAdapter.doLocalDNSLookupConnect(TcpNTAdapter.java:307)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:269)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:243)
+	at oracle.net.nt.ConnStrategy.executeConnOption(ConnStrategy.java:980)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:655)
+	... 53 common frames omitted
+Caused by: oracle.net.nt.TimeoutInterruptHandler$IOReadTimeoutException: Socket read timed out
+	at oracle.net.nt.TimeoutSocketChannel.handleInterrupt(TimeoutSocketChannel.java:543)
+	at oracle.net.nt.TimeoutSocketChannel.connect(TimeoutSocketChannel.java:196)
+	at oracle.net.nt.TimeoutSocketChannel.<init>(TimeoutSocketChannel.java:157)
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:384)
+	... 58 common frames omitted
+[15:16:33.909][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(66) HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[15:16:33.911][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(73) HHH90000026: Oracle10gDialect has been deprecated; use org.hibernate.dialect.OracleDialect instead
+[15:16:34.867][0001] o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService(51) HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[15:16:34.877][0001] o.s.o.j.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(437) Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:16:35.288][0001] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(227) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:16:35.711][0001] o.a.j.l.DirectJDKLog.log(173) Starting ProtocolHandler ["http-nio-9334"]
+[15:16:35.890][0001] o.s.b.w.e.t.TomcatWebServer.start(226) Tomcat started on port(s): 9334 (http) with context path '/figateway'
+[15:16:35.901][0001] o.s.b.StartupInfoLogger.logStarted(57) Started Application in 18.838 seconds (process running for 19.605)
+[15:17:46.248][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 15484 (D:\Workspaces\FSS\DBU_switch\target\classes started by X in D:\Workspaces\FSS\DBU_switch)
+[15:17:46.252][0001] o.s.b.SpringApplication.logStartupProfileInfo(630) No active profile set, falling back to 1 default profile: "default"
+[15:17:47.232][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:17:47.343][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 99 ms. Found 2 JPA repository interfaces.
+[15:17:47.721][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:17:47.752][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[15:17:48.152][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[15:17:48.168][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[15:17:48.173][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[15:17:48.174][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[15:17:48.307][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[15:17:48.311][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 1981 ms
+[15:17:48.561][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:18:00.461][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 12324 (D:\Workspaces\FSS\DBU_switch\target\classes started by X in D:\Workspaces\FSS\DBU_switch)
+[15:18:00.472][0001] o.s.b.SpringApplication.logStartupProfileInfo(630) No active profile set, falling back to 1 default profile: "default"
+[15:18:01.309][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:18:01.410][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 89 ms. Found 2 JPA repository interfaces.
+[15:18:01.747][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:18:01.771][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[15:18:02.208][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[15:18:02.221][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[15:18:02.223][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[15:18:02.224][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[15:18:02.349][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[15:18:02.354][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 1782 ms
+[15:18:02.674][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:18:08.857][0001] c.z.h.p.HikariPool.throwPoolInitializationException(594) oracle - Exception during pool initialization.
+java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection (CONNECTION_ID=vmB7M+p1TyS20aXAYERdyw==)
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:902)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:707)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1088)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:89)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:732)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:648)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330)
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:166)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider.getDefaultDdlAuto(HibernateDefaultDdlAutoProvider.java:42)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.lambda$getVendorProperties$1(HibernateJpaConfiguration.java:129)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:118)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:87)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:80)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:131)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:131)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:640)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.fss.saber.adapter.Application.main(Application.java:16)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection (CONNECTION_ID=vmB7M+p1TyS20aXAYERdyw==)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:694)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:584)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:938)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:349)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:2628)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:666)
+	... 49 common frames omitted
+Caused by: java.io.IOException: Socket read timed out, socket connect lapse 5012 ms. 10.44.120.45 1521  5000 (1/1) true
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:403)
+	at oracle.net.nt.TcpNTAdapter.doLocalDNSLookupConnect(TcpNTAdapter.java:307)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:269)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:243)
+	at oracle.net.nt.ConnStrategy.executeConnOption(ConnStrategy.java:980)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:655)
+	... 54 common frames omitted
+Caused by: oracle.net.nt.TimeoutInterruptHandler$IOReadTimeoutException: Socket read timed out
+	at oracle.net.nt.TimeoutSocketChannel.handleInterrupt(TimeoutSocketChannel.java:543)
+	at oracle.net.nt.TimeoutSocketChannel.connect(TimeoutSocketChannel.java:196)
+	at oracle.net.nt.TimeoutSocketChannel.<init>(TimeoutSocketChannel.java:157)
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:384)
+	... 59 common frames omitted
+[15:18:08.930][0001] o.h.j.i.u.LogHelper.logPersistenceUnitInformation(31) HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:18:08.989][0001] o.h.Version.logVersion(44) HHH000412: Hibernate ORM core version 6.1.5.Final
+[15:18:09.172][0001] o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl.lambda$new$1(626) HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[15:18:09.311][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:18:15.327][0001] c.z.h.p.HikariPool.throwPoolInitializationException(594) oracle - Exception during pool initialization.
+java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection (CONNECTION_ID=0TAlZ5nlRB2F7kG+wv5SGw==)
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:902)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:707)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1088)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:89)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:732)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:648)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1350)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1421)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.fss.saber.adapter.Application.main(Application.java:16)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection (CONNECTION_ID=0TAlZ5nlRB2F7kG+wv5SGw==)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:694)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:584)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:938)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:349)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:2628)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:666)
+	... 48 common frames omitted
+Caused by: java.io.IOException: Socket read timed out, socket connect lapse 5001 ms. 10.44.120.45 1521  5000 (1/1) true
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:403)
+	at oracle.net.nt.TcpNTAdapter.doLocalDNSLookupConnect(TcpNTAdapter.java:307)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:269)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:243)
+	at oracle.net.nt.ConnStrategy.executeConnOption(ConnStrategy.java:980)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:655)
+	... 53 common frames omitted
+Caused by: oracle.net.nt.TimeoutInterruptHandler$IOReadTimeoutException: Socket read timed out
+	at oracle.net.nt.TimeoutSocketChannel.handleInterrupt(TimeoutSocketChannel.java:543)
+	at oracle.net.nt.TimeoutSocketChannel.connect(TimeoutSocketChannel.java:196)
+	at oracle.net.nt.TimeoutSocketChannel.<init>(TimeoutSocketChannel.java:157)
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:384)
+	... 58 common frames omitted
+[15:18:15.328][0001] o.h.e.j.e.i.JdbcEnvironmentInitiator.initiateService(239) HHH000342: Could not obtain connection to query metadata
+java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection (CONNECTION_ID=0TAlZ5nlRB2F7kG+wv5SGw==)
+	at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:902)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:707)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1088)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:89)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:732)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:648)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1350)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1421)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.fss.saber.adapter.Application.main(Application.java:16)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection (CONNECTION_ID=0TAlZ5nlRB2F7kG+wv5SGw==)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:694)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:584)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:938)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:349)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:2628)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:666)
+	... 48 common frames omitted
+Caused by: java.io.IOException: Socket read timed out, socket connect lapse 5001 ms. 10.44.120.45 1521  5000 (1/1) true
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:403)
+	at oracle.net.nt.TcpNTAdapter.doLocalDNSLookupConnect(TcpNTAdapter.java:307)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:269)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:243)
+	at oracle.net.nt.ConnStrategy.executeConnOption(ConnStrategy.java:980)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:655)
+	... 53 common frames omitted
+Caused by: oracle.net.nt.TimeoutInterruptHandler$IOReadTimeoutException: Socket read timed out
+	at oracle.net.nt.TimeoutSocketChannel.handleInterrupt(TimeoutSocketChannel.java:543)
+	at oracle.net.nt.TimeoutSocketChannel.connect(TimeoutSocketChannel.java:196)
+	at oracle.net.nt.TimeoutSocketChannel.<init>(TimeoutSocketChannel.java:157)
+	at oracle.net.nt.TcpNTAdapter.establishSocket(TcpNTAdapter.java:384)
+	... 58 common frames omitted
+[15:18:15.347][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(66) HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[15:18:15.348][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(73) HHH90000026: Oracle10gDialect has been deprecated; use org.hibernate.dialect.OracleDialect instead
+[15:18:16.222][0001] o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService(51) HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[15:18:16.231][0001] o.s.o.j.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(437) Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:18:16.619][0001] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(227) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:18:17.022][0001] o.a.j.l.DirectJDKLog.log(173) Starting ProtocolHandler ["http-nio-9334"]
+[15:18:17.046][0001] o.s.b.w.e.t.TomcatWebServer.start(226) Tomcat started on port(s): 9334 (http) with context path '/figateway'
+[15:18:17.060][0001] o.s.b.StartupInfoLogger.logStarted(57) Started Application in 17.05 seconds (process running for 17.726)
+[15:19:46.056][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 7932 (D:\Workspaces\FSS\DBU_switch\target\classes started by X in D:\Workspaces\FSS\DBU_switch)
+[15:19:46.060][0001] o.s.b.SpringApplication.logStartupProfileInfo(636) The following 1 profile is active: "uat"
+[15:19:46.958][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:19:47.122][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 148 ms. Found 2 JPA repository interfaces.
+[15:19:47.689][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:19:47.720][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[15:19:48.182][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[15:19:48.192][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[15:19:48.193][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[15:19:48.194][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[15:19:48.325][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[15:19:48.330][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 2187 ms
+[15:19:48.595][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:19:53.876][0001] c.z.h.p.HikariPool.checkFailFast(565) oracle - Added connection oracle.jdbc.driver.T4CConnection@7e5b621b
+[15:19:53.880][0001] c.z.h.HikariDataSource.getConnection(123) oracle - Start completed.
+[15:19:53.944][0001] o.h.j.i.u.LogHelper.logPersistenceUnitInformation(31) HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:19:53.998][0001] o.h.Version.logVersion(44) HHH000412: Hibernate ORM core version 6.1.5.Final
+[15:19:54.175][0001] o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl.lambda$new$1(626) HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[15:19:54.364][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(66) HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[15:19:54.366][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(73) HHH90000026: Oracle10gDialect has been deprecated; use org.hibernate.dialect.OracleDialect instead
+[15:19:55.672][0001] o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService(51) HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[15:19:55.685][0001] o.s.o.j.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(437) Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:19:56.124][0001] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(227) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:19:56.523][0001] o.a.j.l.DirectJDKLog.log(173) Starting ProtocolHandler ["http-nio-9334"]
+[15:19:56.544][0001] o.s.b.w.e.t.TomcatWebServer.start(226) Tomcat started on port(s): 9334 (http) with context path '/figateway'
+[15:19:56.556][0001] o.s.b.StartupInfoLogger.logStarted(57) Started Application in 10.954 seconds (process running for 11.671)
+[15:25:50.199][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 12392 (D:\Workspaces\FSS\DBU_switch\target\classes started by X in D:\Workspaces\FSS\DBU_switch)
+[15:25:50.205][0001] o.s.b.SpringApplication.logStartupProfileInfo(636) The following 1 profile is active: "uat"
+[15:25:51.360][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:25:51.460][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 84 ms. Found 2 JPA repository interfaces.
+[15:25:51.893][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:25:51.921][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[15:25:52.434][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[15:25:52.444][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[15:25:52.446][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[15:25:52.446][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[15:25:52.602][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[15:25:52.607][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 2297 ms
+[15:25:52.912][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:25:53.512][0001] c.z.h.p.HikariPool.checkFailFast(565) oracle - Added connection oracle.jdbc.driver.T4CConnection@87d9a01
+[15:25:53.516][0001] c.z.h.HikariDataSource.getConnection(123) oracle - Start completed.
+[15:25:53.594][0001] o.h.j.i.u.LogHelper.logPersistenceUnitInformation(31) HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:25:53.686][0001] o.h.Version.logVersion(44) HHH000412: Hibernate ORM core version 6.1.5.Final
+[15:25:53.906][0001] o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl.lambda$new$1(626) HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[15:25:54.075][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(66) HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[15:25:54.075][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(73) HHH90000026: Oracle10gDialect has been deprecated; use org.hibernate.dialect.OracleDialect instead
+[15:25:55.082][0001] o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService(51) HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[15:25:55.093][0001] o.s.o.j.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(437) Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:25:55.606][0001] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(227) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:25:56.061][0001] o.a.j.l.DirectJDKLog.log(173) Starting ProtocolHandler ["http-nio-9334"]
+[15:25:56.102][0001] o.s.b.w.e.t.TomcatWebServer.start(226) Tomcat started on port(s): 9334 (http) with context path '/figateway'
+[15:25:56.114][0001] o.s.b.StartupInfoLogger.logStarted(57) Started Application in 6.448 seconds (process running for 7.263)
+[15:27:16.587][0029] o.a.j.l.DirectJDKLog.log(173) Initializing Spring DispatcherServlet 'dispatcherServlet'
+[15:27:16.588][0029] o.s.w.s.FrameworkServlet.initServletBean(525) Initializing Servlet 'dispatcherServlet'
+[15:27:16.591][0029] o.s.w.s.FrameworkServlet.initServletBean(547) Completed initialization in 2 ms
+[15:27:16.747][0029] c.f.s.a.r.MicroAtmTransaction.transaction(91) message from middleware
+{"requestcode":"microBalEnqSbm","username":"AVI","password":"null","srno":"FSS00001","carddata":"55AD172C6FC3D968F8704C79D80C25EC1FD110FE767E4C47","pindata":"92D25921171DCEF7","amt":"0","imei":"63210519906377","imsi":"00","companyid":"com.sil.y1000pos","remark":"","reader":"EMV","tag55":"9F2608E72E57DA87254A799F10080105A000000400009F2701809F37043B703FCE9F3602012D950580000400009A032212299C01319F02060000000000005F2A020356820278009F1A0203569F03060000000000009F33036040009F34030200009F3501119F1E086D665F36306220208407A00000052410109F090200649F4104000000039B0268005F3401019F0607A00000052410109F0702AB804F07A0000005241010","mid":"FSS000000000001","sessionId":"aefb80be40d5d6ba5251b0bce876ab3b9f89fa8f36b6240fc2cc041513f3ef07","rrn":"236314244829","hmData":{"op":"MATM","imei":"63210519906377","mid":"FSS000000000001","imsi":"null","txnDispense":{"status":"1","txnid":"236313594394","typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":0},"updatedCashPosition":{"typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":20},"tid":"FSS00001","requestcode":"updateLts","username":"AVI"}}
+[15:27:16.748][0029] c.f.s.a.r.MicroAtmTransaction.transaction(117) creating balance request
+[15:27:16.811][0029] o.h.e.j.s.SqlStatementLogger.logStatement(128) 
+    select
+        u1_0.USER_ID,
+        u1_0.ADM_USER_ROLE_ID,
+        u1_0.APPROVED_BY,
+        u1_0.CREATED_ON,
+        u1_0.MODIFIED_ON,
+        u1_0.ONBOARDED_BY,
+        u1_0.PSWD_MDFD_DT,
+        u1_0.SEQ_ID,
+        u1_0.USER_EMAIL_ID,
+        u1_0.USER_MENU_GRP,
+        u1_0.USER_MOB_NMBR,
+        u1_0.USER_OLD_PASSWORD1,
+        u1_0.USER_OLD_PASSWORD2,
+        u1_0.USER_OLD_PASSWORD3,
+        u1_0.USER_PASSWORD,
+        u1_0.USER_PASSWORD_CNT,
+        u1_0.USER_PASSWORD_STATUS,
+        u1_0.USER_ROLE,
+        u1_0.USER_STATUS 
+    from
+        USER_ATHN_MSTR u1_0 
+    where
+        u1_0.USER_ID=?
+[15:27:17.530][0029] c.f.s.a.r.MicroAtmTransaction.transaction(166) 
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.populateRequest(MicroAtmTransaction.java:174)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.transaction(MicroAtmTransaction.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[15:27:59.447][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 420 (D:\Workspaces\FSS\DBU_switch\target\classes started by X in D:\Workspaces\FSS\DBU_switch)
+[15:27:59.451][0001] o.s.b.SpringApplication.logStartupProfileInfo(636) The following 1 profile is active: "uat"
+[15:28:00.460][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:28:00.554][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 81 ms. Found 2 JPA repository interfaces.
+[15:28:00.888][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:28:00.918][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[15:28:01.347][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[15:28:01.359][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[15:28:01.361][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[15:28:01.362][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[15:28:01.494][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[15:28:01.499][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 1969 ms
+[15:28:01.769][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:28:02.261][0001] c.z.h.p.HikariPool.checkFailFast(565) oracle - Added connection oracle.jdbc.driver.T4CConnection@e5c2463
+[15:28:02.265][0001] c.z.h.HikariDataSource.getConnection(123) oracle - Start completed.
+[15:28:02.335][0001] o.h.j.i.u.LogHelper.logPersistenceUnitInformation(31) HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:28:02.401][0001] o.h.Version.logVersion(44) HHH000412: Hibernate ORM core version 6.1.5.Final
+[15:28:02.578][0001] o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl.lambda$new$1(626) HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[15:28:02.746][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(66) HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[15:28:02.748][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(73) HHH90000026: Oracle10gDialect has been deprecated; use org.hibernate.dialect.OracleDialect instead
+[15:28:03.746][0001] o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService(51) HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[15:28:03.759][0001] o.s.o.j.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(437) Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:28:04.202][0001] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(227) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:28:04.758][0001] o.a.j.l.DirectJDKLog.log(173) Starting ProtocolHandler ["http-nio-9334"]
+[15:28:04.792][0001] o.s.b.w.e.t.TomcatWebServer.start(226) Tomcat started on port(s): 9334 (http) with context path '/figateway'
+[15:28:04.849][0001] o.s.b.StartupInfoLogger.logStarted(57) Started Application in 5.822 seconds (process running for 6.57)
+[15:28:07.645][0026] o.a.j.l.DirectJDKLog.log(173) Initializing Spring DispatcherServlet 'dispatcherServlet'
+[15:28:07.646][0026] o.s.w.s.FrameworkServlet.initServletBean(525) Initializing Servlet 'dispatcherServlet'
+[15:28:07.649][0026] o.s.w.s.FrameworkServlet.initServletBean(547) Completed initialization in 2 ms
+[15:28:07.840][0026] c.f.s.a.r.MicroAtmTransaction.transaction(91) message from middleware
+{"requestcode":"microBalEnqSbm","username":"AVI","password":"null","srno":"FSS00001","carddata":"55AD172C6FC3D968F8704C79D80C25EC1FD110FE767E4C47","pindata":"92D25921171DCEF7","amt":"0","imei":"63210519906377","imsi":"00","companyid":"com.sil.y1000pos","remark":"","reader":"EMV","tag55":"9F2608E72E57DA87254A799F10080105A000000400009F2701809F37043B703FCE9F3602012D950580000400009A032212299C01319F02060000000000005F2A020356820278009F1A0203569F03060000000000009F33036040009F34030200009F3501119F1E086D665F36306220208407A00000052410109F090200649F4104000000039B0268005F3401019F0607A00000052410109F0702AB804F07A0000005241010","mid":"FSS000000000001","sessionId":"aefb80be40d5d6ba5251b0bce876ab3b9f89fa8f36b6240fc2cc041513f3ef07","rrn":"236314244829","hmData":{"op":"MATM","imei":"63210519906377","mid":"FSS000000000001","imsi":"null","txnDispense":{"status":"1","txnid":"236313594394","typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":0},"updatedCashPosition":{"typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":20},"tid":"FSS00001","requestcode":"updateLts","username":"AVI"}}
+[15:28:07.841][0026] c.f.s.a.r.MicroAtmTransaction.transaction(117) creating balance request
+[15:28:07.862][0026] c.f.s.a.u.MiscService.decryptTDES(44) decryptTDES error.
+[15:28:07.864][0026] c.f.s.a.r.MicroAtmTransaction.transaction(166) 
+java.lang.NullPointerException: Cannot read the array length because "bytes" is null
+	at java.base/java.lang.String.<init>(String.java:1432)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.decryptTrack2(MicroAtmTransaction.java:255)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.populateRequest(MicroAtmTransaction.java:174)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.transaction(MicroAtmTransaction.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[15:28:32.991][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 18528 (D:\Workspaces\FSS\DBU_switch\target\classes started by X in D:\Workspaces\FSS\DBU_switch)
+[15:28:32.995][0001] o.s.b.SpringApplication.logStartupProfileInfo(636) The following 1 profile is active: "uat"
+[15:28:34.125][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:28:34.233][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 96 ms. Found 2 JPA repository interfaces.
+[15:28:34.641][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:28:34.668][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[15:28:35.212][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[15:28:35.233][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[15:28:35.235][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[15:28:35.238][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[15:28:35.497][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[15:28:35.504][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 2414 ms
+[15:28:35.941][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:28:36.488][0001] c.z.h.p.HikariPool.checkFailFast(565) oracle - Added connection oracle.jdbc.driver.T4CConnection@236ae13d
+[15:28:36.496][0001] c.z.h.HikariDataSource.getConnection(123) oracle - Start completed.
+[15:28:36.632][0001] o.h.j.i.u.LogHelper.logPersistenceUnitInformation(31) HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:28:36.714][0001] o.h.Version.logVersion(44) HHH000412: Hibernate ORM core version 6.1.5.Final
+[15:28:36.939][0001] o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl.lambda$new$1(626) HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[15:28:37.123][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(66) HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[15:28:37.125][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(73) HHH90000026: Oracle10gDialect has been deprecated; use org.hibernate.dialect.OracleDialect instead
+[15:28:38.152][0001] o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService(51) HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[15:28:38.167][0001] o.s.o.j.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(437) Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:28:38.587][0001] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(227) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:28:39.020][0001] o.a.j.l.DirectJDKLog.log(173) Starting ProtocolHandler ["http-nio-9334"]
+[15:28:39.051][0001] o.s.b.w.e.t.TomcatWebServer.start(226) Tomcat started on port(s): 9334 (http) with context path '/figateway'
+[15:28:39.063][0001] o.s.b.StartupInfoLogger.logStarted(57) Started Application in 6.603 seconds (process running for 7.441)
+[15:28:42.738][0027] o.a.j.l.DirectJDKLog.log(173) Initializing Spring DispatcherServlet 'dispatcherServlet'
+[15:28:42.739][0027] o.s.w.s.FrameworkServlet.initServletBean(525) Initializing Servlet 'dispatcherServlet'
+[15:28:42.741][0027] o.s.w.s.FrameworkServlet.initServletBean(547) Completed initialization in 2 ms
+[15:28:42.932][0027] c.f.s.a.r.MicroAtmTransaction.transaction(91) message from middleware
+{"requestcode":"microBalEnqSbm","username":"AVI","password":"null","srno":"FSS00001","carddata":"55AD172C6FC3D968F8704C79D80C25EC1FD110FE767E4C47","pindata":"92D25921171DCEF7","amt":"0","imei":"63210519906377","imsi":"00","companyid":"com.sil.y1000pos","remark":"","reader":"EMV","tag55":"9F2608E72E57DA87254A799F10080105A000000400009F2701809F37043B703FCE9F3602012D950580000400009A032212299C01319F02060000000000005F2A020356820278009F1A0203569F03060000000000009F33036040009F34030200009F3501119F1E086D665F36306220208407A00000052410109F090200649F4104000000039B0268005F3401019F0607A00000052410109F0702AB804F07A0000005241010","mid":"FSS000000000001","sessionId":"aefb80be40d5d6ba5251b0bce876ab3b9f89fa8f36b6240fc2cc041513f3ef07","rrn":"236314244829","hmData":{"op":"MATM","imei":"63210519906377","mid":"FSS000000000001","imsi":"null","txnDispense":{"status":"1","txnid":"236313594394","typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":0},"updatedCashPosition":{"typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":20},"tid":"FSS00001","requestcode":"updateLts","username":"AVI"}}
+[15:28:42.933][0027] c.f.s.a.r.MicroAtmTransaction.transaction(117) creating balance request
+[15:28:42.944][0027] c.f.s.a.u.MiscService.decryptTDES(44) decryptTDES error.
+java.security.InvalidKeyException: Wrong key size
+	at java.base/com.sun.crypto.provider.DESedeCrypt.init(DESedeCrypt.java:69)
+	at java.base/com.sun.crypto.provider.ElectronicCodeBook.init(ElectronicCodeBook.java:97)
+	at java.base/com.sun.crypto.provider.CipherCore.init(CipherCore.java:482)
+	at java.base/com.sun.crypto.provider.CipherCore.init(CipherCore.java:400)
+	at java.base/com.sun.crypto.provider.DESedeCipher.engineInit(DESedeCipher.java:167)
+	at java.base/javax.crypto.Cipher.implInit(Cipher.java:867)
+	at java.base/javax.crypto.Cipher.chooseProvider(Cipher.java:929)
+	at java.base/javax.crypto.Cipher.init(Cipher.java:1299)
+	at java.base/javax.crypto.Cipher.init(Cipher.java:1236)
+	at com.fss.saber.adapter.util.MiscService.decryptTDES(MiscService.java:42)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.decryptTrack2(MicroAtmTransaction.java:254)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.populateRequest(MicroAtmTransaction.java:174)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.transaction(MicroAtmTransaction.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[15:28:42.947][0027] c.f.s.a.r.MicroAtmTransaction.transaction(166) 
+java.lang.NullPointerException: Cannot read the array length because "bytes" is null
+	at java.base/java.lang.String.<init>(String.java:1432)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.decryptTrack2(MicroAtmTransaction.java:255)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.populateRequest(MicroAtmTransaction.java:174)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.transaction(MicroAtmTransaction.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[15:29:23.973][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 1216 (D:\Workspaces\FSS\DBU_switch\target\classes started by X in D:\Workspaces\FSS\DBU_switch)
+[15:29:23.978][0001] o.s.b.SpringApplication.logStartupProfileInfo(636) The following 1 profile is active: "uat"
+[15:29:24.978][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:29:25.075][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 86 ms. Found 2 JPA repository interfaces.
+[15:29:25.430][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:29:25.460][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[15:29:25.893][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[15:29:25.907][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[15:29:25.909][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[15:29:25.910][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[15:29:26.084][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[15:29:26.091][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 2012 ms
+[15:29:26.768][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:29:27.444][0001] c.z.h.p.HikariPool.checkFailFast(565) oracle - Added connection oracle.jdbc.driver.T4CConnection@e5c2463
+[15:29:27.475][0001] c.z.h.HikariDataSource.getConnection(123) oracle - Start completed.
+[15:29:27.611][0001] o.h.j.i.u.LogHelper.logPersistenceUnitInformation(31) HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:29:27.738][0001] o.h.Version.logVersion(44) HHH000412: Hibernate ORM core version 6.1.5.Final
+[15:29:28.442][0001] o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl.lambda$new$1(626) HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[15:29:28.847][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(66) HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[15:29:28.848][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(73) HHH90000026: Oracle10gDialect has been deprecated; use org.hibernate.dialect.OracleDialect instead
+[15:29:30.638][0001] o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService(51) HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[15:29:30.656][0001] o.s.o.j.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(437) Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:29:31.615][0001] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(227) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:29:32.668][0001] o.a.j.l.DirectJDKLog.log(173) Starting ProtocolHandler ["http-nio-9334"]
+[15:29:32.790][0001] o.s.b.w.e.t.TomcatWebServer.start(226) Tomcat started on port(s): 9334 (http) with context path '/figateway'
+[15:29:32.818][0001] o.s.b.StartupInfoLogger.logStarted(57) Started Application in 9.315 seconds (process running for 9.973)
+[15:30:16.657][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 1472 (D:\Workspaces\FSS\DBU_switch\target\classes started by X in D:\Workspaces\FSS\DBU_switch)
+[15:30:16.661][0001] o.s.b.SpringApplication.logStartupProfileInfo(636) The following 1 profile is active: "uat"
+[15:30:17.649][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:30:17.767][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 101 ms. Found 2 JPA repository interfaces.
+[15:30:18.199][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:30:18.238][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[15:30:18.669][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[15:30:18.682][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[15:30:18.683][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[15:30:18.684][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[15:30:18.819][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[15:30:18.827][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 2079 ms
+[15:30:19.094][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:30:21.244][0001] c.z.h.p.HikariPool.checkFailFast(565) oracle - Added connection oracle.jdbc.driver.T4CConnection@12d40609
+[15:30:21.247][0001] c.z.h.HikariDataSource.getConnection(123) oracle - Start completed.
+[15:30:21.321][0001] o.h.j.i.u.LogHelper.logPersistenceUnitInformation(31) HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:30:21.384][0001] o.h.Version.logVersion(44) HHH000412: Hibernate ORM core version 6.1.5.Final
+[15:30:21.601][0001] o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl.lambda$new$1(626) HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[15:30:21.799][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(66) HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[15:30:21.800][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(73) HHH90000026: Oracle10gDialect has been deprecated; use org.hibernate.dialect.OracleDialect instead
+[15:30:23.184][0001] o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService(51) HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[15:30:23.194][0001] o.s.o.j.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(437) Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:30:23.980][0001] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(227) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:30:24.472][0001] o.a.j.l.DirectJDKLog.log(173) Starting ProtocolHandler ["http-nio-9334"]
+[15:30:24.497][0001] o.s.b.w.e.t.TomcatWebServer.start(226) Tomcat started on port(s): 9334 (http) with context path '/figateway'
+[15:30:24.509][0001] o.s.b.StartupInfoLogger.logStarted(57) Started Application in 8.377 seconds (process running for 9.084)
+[15:30:26.673][0027] o.a.j.l.DirectJDKLog.log(173) Initializing Spring DispatcherServlet 'dispatcherServlet'
+[15:30:26.674][0027] o.s.w.s.FrameworkServlet.initServletBean(525) Initializing Servlet 'dispatcherServlet'
+[15:30:26.676][0027] o.s.w.s.FrameworkServlet.initServletBean(547) Completed initialization in 2 ms
+[15:30:26.839][0027] c.f.s.a.r.MicroAtmTransaction.transaction(91) message from middleware
+{"requestcode":"microBalEnqSbm","username":"AVI","password":"null","srno":"FSS00001","carddata":"55AD172C6FC3D968F8704C79D80C25EC1FD110FE767E4C47","pindata":"92D25921171DCEF7","amt":"0","imei":"63210519906377","imsi":"00","companyid":"com.sil.y1000pos","remark":"","reader":"EMV","tag55":"9F2608E72E57DA87254A799F10080105A000000400009F2701809F37043B703FCE9F3602012D950580000400009A032212299C01319F02060000000000005F2A020356820278009F1A0203569F03060000000000009F33036040009F34030200009F3501119F1E086D665F36306220208407A00000052410109F090200649F4104000000039B0268005F3401019F0607A00000052410109F0702AB804F07A0000005241010","mid":"FSS000000000001","sessionId":"aefb80be40d5d6ba5251b0bce876ab3b9f89fa8f36b6240fc2cc041513f3ef07","rrn":"236314244829","hmData":{"op":"MATM","imei":"63210519906377","mid":"FSS000000000001","imsi":"null","txnDispense":{"status":"1","txnid":"236313594394","typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":0},"updatedCashPosition":{"typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":20},"tid":"FSS00001","requestcode":"updateLts","username":"AVI"}}
+[15:30:26.839][0027] c.f.s.a.r.MicroAtmTransaction.transaction(117) creating balance request
+[15:30:26.908][0027] o.h.e.j.s.SqlStatementLogger.logStatement(128) 
+    select
+        u1_0.USER_ID,
+        u1_0.ADM_USER_ROLE_ID,
+        u1_0.APPROVED_BY,
+        u1_0.CREATED_ON,
+        u1_0.MODIFIED_ON,
+        u1_0.ONBOARDED_BY,
+        u1_0.PSWD_MDFD_DT,
+        u1_0.SEQ_ID,
+        u1_0.USER_EMAIL_ID,
+        u1_0.USER_MENU_GRP,
+        u1_0.USER_MOB_NMBR,
+        u1_0.USER_OLD_PASSWORD1,
+        u1_0.USER_OLD_PASSWORD2,
+        u1_0.USER_OLD_PASSWORD3,
+        u1_0.USER_PASSWORD,
+        u1_0.USER_PASSWORD_CNT,
+        u1_0.USER_PASSWORD_STATUS,
+        u1_0.USER_ROLE,
+        u1_0.USER_STATUS 
+    from
+        USER_ATHN_MSTR u1_0 
+    where
+        u1_0.USER_ID=?
+[15:30:26.948][0027] c.f.s.a.r.MicroAtmTransaction.transaction(166) 
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.populateRequest(MicroAtmTransaction.java:175)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.transaction(MicroAtmTransaction.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[15:31:09.786][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 18556 (D:\Workspaces\FSS\DBU_switch\target\classes started by X in D:\Workspaces\FSS\DBU_switch)
+[15:31:09.793][0001] o.s.b.SpringApplication.logStartupProfileInfo(636) The following 1 profile is active: "uat"
+[15:31:10.645][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:31:10.769][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 111 ms. Found 2 JPA repository interfaces.
+[15:31:11.147][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:31:11.179][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[15:31:11.592][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[15:31:11.608][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[15:31:11.609][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[15:31:11.610][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[15:31:11.752][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[15:31:11.757][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 1887 ms
+[15:31:12.009][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:31:12.456][0001] c.z.h.p.HikariPool.checkFailFast(565) oracle - Added connection oracle.jdbc.driver.T4CConnection@e5c2463
+[15:31:12.461][0001] c.z.h.HikariDataSource.getConnection(123) oracle - Start completed.
+[15:31:12.520][0001] o.h.j.i.u.LogHelper.logPersistenceUnitInformation(31) HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:31:12.584][0001] o.h.Version.logVersion(44) HHH000412: Hibernate ORM core version 6.1.5.Final
+[15:31:12.771][0001] o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl.lambda$new$1(626) HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[15:31:12.912][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(66) HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[15:31:12.914][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(73) HHH90000026: Oracle10gDialect has been deprecated; use org.hibernate.dialect.OracleDialect instead
+[15:31:13.874][0001] o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService(51) HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[15:31:13.885][0001] o.s.o.j.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(437) Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:31:14.279][0001] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(227) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:31:14.667][0001] o.a.j.l.DirectJDKLog.log(173) Starting ProtocolHandler ["http-nio-9334"]
+[15:31:14.696][0001] o.s.b.w.e.t.TomcatWebServer.start(226) Tomcat started on port(s): 9334 (http) with context path '/figateway'
+[15:31:14.706][0001] o.s.b.StartupInfoLogger.logStarted(57) Started Application in 5.454 seconds (process running for 6.14)
+[15:31:22.395][0026] o.a.j.l.DirectJDKLog.log(173) Initializing Spring DispatcherServlet 'dispatcherServlet'
+[15:31:22.396][0026] o.s.w.s.FrameworkServlet.initServletBean(525) Initializing Servlet 'dispatcherServlet'
+[15:31:22.398][0026] o.s.w.s.FrameworkServlet.initServletBean(547) Completed initialization in 2 ms
+[15:31:22.546][0026] c.f.s.a.r.MicroAtmTransaction.transaction(91) message from middleware
+{"requestcode":"microBalEnqSbm","username":"AVI","password":"null","srno":"FSS00001","carddata":"55AD172C6FC3D968F8704C79D80C25EC1FD110FE767E4C47","pindata":"92D25921171DCEF7","amt":"0","imei":"63210519906377","imsi":"00","companyid":"com.sil.y1000pos","remark":"","reader":"EMV","tag55":"9F2608E72E57DA87254A799F10080105A000000400009F2701809F37043B703FCE9F3602012D950580000400009A032212299C01319F02060000000000005F2A020356820278009F1A0203569F03060000000000009F33036040009F34030200009F3501119F1E086D665F36306220208407A00000052410109F090200649F4104000000039B0268005F3401019F0607A00000052410109F0702AB804F07A0000005241010","mid":"FSS000000000001","sessionId":"aefb80be40d5d6ba5251b0bce876ab3b9f89fa8f36b6240fc2cc041513f3ef07","rrn":"236314244829","hmData":{"op":"MATM","imei":"63210519906377","mid":"FSS000000000001","imsi":"null","txnDispense":{"status":"1","txnid":"236313594394","typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":0},"updatedCashPosition":{"typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":20},"tid":"FSS00001","requestcode":"updateLts","username":"AVI"}}
+[15:31:22.547][0026] c.f.s.a.r.MicroAtmTransaction.transaction(117) creating balance request
+[15:31:22.636][0026] o.h.e.j.s.SqlStatementLogger.logStatement(128) 
+    select
+        u1_0.USER_ID,
+        u1_0.ADM_USER_ROLE_ID,
+        u1_0.APPROVED_BY,
+        u1_0.CREATED_ON,
+        u1_0.MODIFIED_ON,
+        u1_0.ONBOARDED_BY,
+        u1_0.PSWD_MDFD_DT,
+        u1_0.SEQ_ID,
+        u1_0.USER_EMAIL_ID,
+        u1_0.USER_MENU_GRP,
+        u1_0.USER_MOB_NMBR,
+        u1_0.USER_OLD_PASSWORD1,
+        u1_0.USER_OLD_PASSWORD2,
+        u1_0.USER_OLD_PASSWORD3,
+        u1_0.USER_PASSWORD,
+        u1_0.USER_PASSWORD_CNT,
+        u1_0.USER_PASSWORD_STATUS,
+        u1_0.USER_ROLE,
+        u1_0.USER_STATUS 
+    from
+        USER_ATHN_MSTR u1_0 
+    where
+        u1_0.USER_ID=?
+[15:31:22.674][0026] c.f.s.a.r.MicroAtmTransaction.transaction(166) 
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.populateRequest(MicroAtmTransaction.java:175)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.transaction(MicroAtmTransaction.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[15:35:09.600][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 17768 (D:\Workspaces\FSS\DBU_switch\target\classes started by X in D:\Workspaces\FSS\DBU_switch)
+[15:35:09.604][0001] o.s.b.SpringApplication.logStartupProfileInfo(636) The following 1 profile is active: "uat"
+[15:35:10.438][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:35:10.531][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 81 ms. Found 2 JPA repository interfaces.
+[15:35:10.965][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:35:10.998][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[15:35:11.439][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[15:35:11.456][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[15:35:11.458][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[15:35:11.460][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[15:35:11.595][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[15:35:11.598][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 1905 ms
+[15:35:11.839][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:35:12.363][0001] c.z.h.p.HikariPool.checkFailFast(565) oracle - Added connection oracle.jdbc.driver.T4CConnection@e5c2463
+[15:35:12.369][0001] c.z.h.HikariDataSource.getConnection(123) oracle - Start completed.
+[15:35:12.447][0001] o.h.j.i.u.LogHelper.logPersistenceUnitInformation(31) HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:35:12.509][0001] o.h.Version.logVersion(44) HHH000412: Hibernate ORM core version 6.1.5.Final
+[15:35:12.709][0001] o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl.lambda$new$1(626) HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[15:35:12.871][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(66) HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[15:35:12.872][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(73) HHH90000026: Oracle10gDialect has been deprecated; use org.hibernate.dialect.OracleDialect instead
+[15:35:13.935][0001] o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService(51) HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[15:35:13.946][0001] o.s.o.j.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(437) Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:35:14.406][0001] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(227) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:35:14.807][0001] o.a.j.l.DirectJDKLog.log(173) Starting ProtocolHandler ["http-nio-9334"]
+[15:35:14.833][0001] o.s.b.w.e.t.TomcatWebServer.start(226) Tomcat started on port(s): 9334 (http) with context path '/figateway'
+[15:35:14.849][0001] o.s.b.StartupInfoLogger.logStarted(57) Started Application in 5.762 seconds (process running for 6.481)
+[15:35:18.516][0027] o.a.j.l.DirectJDKLog.log(173) Initializing Spring DispatcherServlet 'dispatcherServlet'
+[15:35:18.518][0027] o.s.w.s.FrameworkServlet.initServletBean(525) Initializing Servlet 'dispatcherServlet'
+[15:35:18.520][0027] o.s.w.s.FrameworkServlet.initServletBean(547) Completed initialization in 1 ms
+[15:35:18.666][0027] c.f.s.a.r.MicroAtmTransaction.transaction(91) message from middleware
+{"requestcode":"microBalEnqSbm","username":"AVI","password":"null","srno":"FSS00001","carddata":"55AD172C6FC3D968F8704C79D80C25EC1FD110FE767E4C47","pindata":"92D25921171DCEF7","amt":"0","imei":"63210519906377","imsi":"00","companyid":"com.sil.y1000pos","remark":"","reader":"EMV","tag55":"9F2608E72E57DA87254A799F10080105A000000400009F2701809F37043B703FCE9F3602012D950580000400009A032212299C01319F02060000000000005F2A020356820278009F1A0203569F03060000000000009F33036040009F34030200009F3501119F1E086D665F36306220208407A00000052410109F090200649F4104000000039B0268005F3401019F0607A00000052410109F0702AB804F07A0000005241010","mid":"FSS000000000001","sessionId":"aefb80be40d5d6ba5251b0bce876ab3b9f89fa8f36b6240fc2cc041513f3ef07","rrn":"236314244829","hmData":{"op":"MATM","imei":"63210519906377","mid":"FSS000000000001","imsi":"null","txnDispense":{"status":"1","txnid":"236313594394","typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":0},"updatedCashPosition":{"typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":20},"tid":"FSS00001","requestcode":"updateLts","username":"AVI"}}
+[15:35:18.667][0027] c.f.s.a.r.MicroAtmTransaction.transaction(117) creating balance request
+[15:35:18.730][0027] o.h.e.j.s.SqlStatementLogger.logStatement(128) 
+    select
+        u1_0.USER_ID,
+        u1_0.ADM_USER_ROLE_ID,
+        u1_0.APPROVED_BY,
+        u1_0.CREATED_ON,
+        u1_0.MODIFIED_ON,
+        u1_0.ONBOARDED_BY,
+        u1_0.PSWD_MDFD_DT,
+        u1_0.SEQ_ID,
+        u1_0.USER_EMAIL_ID,
+        u1_0.USER_MENU_GRP,
+        u1_0.USER_MOB_NMBR,
+        u1_0.USER_OLD_PASSWORD1,
+        u1_0.USER_OLD_PASSWORD2,
+        u1_0.USER_OLD_PASSWORD3,
+        u1_0.USER_PASSWORD,
+        u1_0.USER_PASSWORD_CNT,
+        u1_0.USER_PASSWORD_STATUS,
+        u1_0.USER_ROLE,
+        u1_0.USER_STATUS 
+    from
+        USER_ATHN_MSTR u1_0 
+    where
+        u1_0.USER_ID=?
+[15:35:18.767][0027] c.f.s.a.r.MicroAtmTransaction.transaction(166) 
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.populateRequest(MicroAtmTransaction.java:175)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.transaction(MicroAtmTransaction.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[15:36:14.646][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 11496 (D:\Workspaces\FSS\DBU_switch\target\classes started by X in D:\Workspaces\FSS\DBU_switch)
+[15:36:14.649][0001] o.s.b.SpringApplication.logStartupProfileInfo(636) The following 1 profile is active: "uat"
+[15:36:15.466][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:36:15.558][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 80 ms. Found 2 JPA repository interfaces.
+[15:36:15.901][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:36:15.924][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[15:36:16.407][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[15:36:16.422][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[15:36:16.423][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[15:36:16.425][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[15:36:16.560][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[15:36:16.563][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 1828 ms
+[15:36:16.829][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:36:17.333][0001] c.z.h.p.HikariPool.checkFailFast(565) oracle - Added connection oracle.jdbc.driver.T4CConnection@7e5b621b
+[15:36:17.337][0001] c.z.h.HikariDataSource.getConnection(123) oracle - Start completed.
+[15:36:17.404][0001] o.h.j.i.u.LogHelper.logPersistenceUnitInformation(31) HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:36:17.471][0001] o.h.Version.logVersion(44) HHH000412: Hibernate ORM core version 6.1.5.Final
+[15:36:17.671][0001] o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl.lambda$new$1(626) HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[15:36:17.827][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(66) HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[15:36:17.828][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(73) HHH90000026: Oracle10gDialect has been deprecated; use org.hibernate.dialect.OracleDialect instead
+[15:36:18.794][0001] o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService(51) HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[15:36:18.805][0001] o.s.o.j.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(437) Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:36:19.204][0001] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(227) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:36:19.579][0001] o.a.j.l.DirectJDKLog.log(173) Starting ProtocolHandler ["http-nio-9334"]
+[15:36:19.604][0001] o.s.b.w.e.t.TomcatWebServer.start(226) Tomcat started on port(s): 9334 (http) with context path '/figateway'
+[15:36:19.616][0001] o.s.b.StartupInfoLogger.logStarted(57) Started Application in 5.432 seconds (process running for 6.11)
+[15:36:24.209][0026] o.a.j.l.DirectJDKLog.log(173) Initializing Spring DispatcherServlet 'dispatcherServlet'
+[15:36:24.209][0026] o.s.w.s.FrameworkServlet.initServletBean(525) Initializing Servlet 'dispatcherServlet'
+[15:36:24.211][0026] o.s.w.s.FrameworkServlet.initServletBean(547) Completed initialization in 1 ms
+[15:36:24.345][0026] c.f.s.a.r.MicroAtmTransaction.transaction(91) message from middleware
+{"requestcode":"microBalEnqSbm","username":"AVI","password":"null","srno":"FSS00001","carddata":"55AD172C6FC3D968F8704C79D80C25EC1FD110FE767E4C47","pindata":"92D25921171DCEF7","amt":"0","imei":"63210519906377","imsi":"00","companyid":"com.sil.y1000pos","remark":"","reader":"EMV","tag55":"9F2608E72E57DA87254A799F10080105A000000400009F2701809F37043B703FCE9F3602012D950580000400009A032212299C01319F02060000000000005F2A020356820278009F1A0203569F03060000000000009F33036040009F34030200009F3501119F1E086D665F36306220208407A00000052410109F090200649F4104000000039B0268005F3401019F0607A00000052410109F0702AB804F07A0000005241010","mid":"FSS000000000001","sessionId":"aefb80be40d5d6ba5251b0bce876ab3b9f89fa8f36b6240fc2cc041513f3ef07","rrn":"236314244829","hmData":{"op":"MATM","imei":"63210519906377","mid":"FSS000000000001","imsi":"null","txnDispense":{"status":"1","txnid":"236313594394","typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":0},"updatedCashPosition":{"typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":20},"tid":"FSS00001","requestcode":"updateLts","username":"AVI"}}
+[15:36:24.345][0026] c.f.s.a.r.MicroAtmTransaction.transaction(117) creating balance request
+[15:36:24.350][0026] c.f.s.a.u.MiscService.decryptTDES(46) decryptTDES error.
+javax.crypto.BadPaddingException: Given final block not properly padded. Such issues can arise if a bad key is used during decryption.
+	at java.base/com.sun.crypto.provider.CipherCore.unpad(CipherCore.java:859)
+	at java.base/com.sun.crypto.provider.CipherCore.fillOutputBuffer(CipherCore.java:939)
+	at java.base/com.sun.crypto.provider.CipherCore.doFinal(CipherCore.java:735)
+	at java.base/com.sun.crypto.provider.DESedeCipher.engineDoFinal(DESedeCipher.java:295)
+	at java.base/javax.crypto.Cipher.doFinal(Cipher.java:2205)
+	at com.fss.saber.adapter.util.MiscService.decryptTDES(MiscService.java:45)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.decryptTrack2(MicroAtmTransaction.java:254)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.populateRequest(MicroAtmTransaction.java:174)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.transaction(MicroAtmTransaction.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[15:36:24.352][0026] c.f.s.a.r.MicroAtmTransaction.transaction(166) 
+java.lang.NullPointerException: byteToHex : byte array input is null.
+	at org.util.iso8583.util.ByteHexUtil.byteToHex(ByteHexUtil.java:142)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.decryptTrack2(MicroAtmTransaction.java:255)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.populateRequest(MicroAtmTransaction.java:174)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.transaction(MicroAtmTransaction.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[15:38:43.160][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 18852 (D:\Workspaces\FSS\DBU_switch\target\classes started by X in D:\Workspaces\FSS\DBU_switch)
+[15:38:43.164][0001] o.s.b.SpringApplication.logStartupProfileInfo(636) The following 1 profile is active: "uat"
+[15:38:44.015][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:38:44.112][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 87 ms. Found 2 JPA repository interfaces.
+[15:38:44.452][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:38:44.484][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[15:38:44.918][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[15:38:44.934][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[15:38:44.937][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[15:38:44.938][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[15:38:45.072][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[15:38:45.077][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 1837 ms
+[15:38:45.354][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:38:45.990][0001] c.z.h.p.HikariPool.checkFailFast(565) oracle - Added connection oracle.jdbc.driver.T4CConnection@10177794
+[15:38:45.996][0001] c.z.h.HikariDataSource.getConnection(123) oracle - Start completed.
+[15:38:46.063][0001] o.h.j.i.u.LogHelper.logPersistenceUnitInformation(31) HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:38:46.135][0001] o.h.Version.logVersion(44) HHH000412: Hibernate ORM core version 6.1.5.Final
+[15:38:46.410][0001] o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl.lambda$new$1(626) HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[15:38:46.569][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(66) HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[15:38:46.570][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(73) HHH90000026: Oracle10gDialect has been deprecated; use org.hibernate.dialect.OracleDialect instead
+[15:38:47.578][0001] o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService(51) HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[15:38:47.589][0001] o.s.o.j.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(437) Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:38:47.981][0001] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(227) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:38:48.391][0001] o.a.j.l.DirectJDKLog.log(173) Starting ProtocolHandler ["http-nio-9334"]
+[15:38:48.421][0001] o.s.b.w.e.t.TomcatWebServer.start(226) Tomcat started on port(s): 9334 (http) with context path '/figateway'
+[15:38:48.433][0001] o.s.b.StartupInfoLogger.logStarted(57) Started Application in 5.776 seconds (process running for 6.482)
+[15:38:51.512][0027] o.a.j.l.DirectJDKLog.log(173) Initializing Spring DispatcherServlet 'dispatcherServlet'
+[15:38:51.513][0027] o.s.w.s.FrameworkServlet.initServletBean(525) Initializing Servlet 'dispatcherServlet'
+[15:38:51.515][0027] o.s.w.s.FrameworkServlet.initServletBean(547) Completed initialization in 2 ms
+[15:38:51.698][0027] c.f.s.a.r.MicroAtmTransaction.transaction(91) message from middleware
+{"requestcode":"microBalEnqSbm","username":"AVI","password":"null","srno":"FSS00001","carddata":"55AD172C6FC3D968F8704C79D80C25EC1FD110FE767E4C47","pindata":"92D25921171DCEF7","amt":"0","imei":"63210519906377","imsi":"00","companyid":"com.sil.y1000pos","remark":"","reader":"EMV","tag55":"9F2608E72E57DA87254A799F10080105A000000400009F2701809F37043B703FCE9F3602012D950580000400009A032212299C01319F02060000000000005F2A020356820278009F1A0203569F03060000000000009F33036040009F34030200009F3501119F1E086D665F36306220208407A00000052410109F090200649F4104000000039B0268005F3401019F0607A00000052410109F0702AB804F07A0000005241010","mid":"FSS000000000001","sessionId":"aefb80be40d5d6ba5251b0bce876ab3b9f89fa8f36b6240fc2cc041513f3ef07","rrn":"236314244829","hmData":{"op":"MATM","imei":"63210519906377","mid":"FSS000000000001","imsi":"null","txnDispense":{"status":"1","txnid":"236313594394","typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":0},"updatedCashPosition":{"typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":20},"tid":"FSS00001","requestcode":"updateLts","username":"AVI"}}
+[15:38:51.699][0027] c.f.s.a.r.MicroAtmTransaction.transaction(117) creating balance request
+[15:38:51.799][0027] o.h.e.j.s.SqlStatementLogger.logStatement(128) 
+    select
+        u1_0.USER_ID,
+        u1_0.ADM_USER_ROLE_ID,
+        u1_0.APPROVED_BY,
+        u1_0.CREATED_ON,
+        u1_0.MODIFIED_ON,
+        u1_0.ONBOARDED_BY,
+        u1_0.PSWD_MDFD_DT,
+        u1_0.SEQ_ID,
+        u1_0.USER_EMAIL_ID,
+        u1_0.USER_MENU_GRP,
+        u1_0.USER_MOB_NMBR,
+        u1_0.USER_OLD_PASSWORD1,
+        u1_0.USER_OLD_PASSWORD2,
+        u1_0.USER_OLD_PASSWORD3,
+        u1_0.USER_PASSWORD,
+        u1_0.USER_PASSWORD_CNT,
+        u1_0.USER_PASSWORD_STATUS,
+        u1_0.USER_ROLE,
+        u1_0.USER_STATUS 
+    from
+        USER_ATHN_MSTR u1_0 
+    where
+        u1_0.USER_ID=?
+[15:38:51.840][0027] c.f.s.a.r.MicroAtmTransaction.transaction(166) 
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.populateRequest(MicroAtmTransaction.java:175)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.transaction(MicroAtmTransaction.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[15:39:16.343][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 860 (D:\Workspaces\FSS\DBU_switch\target\classes started by X in D:\Workspaces\FSS\DBU_switch)
+[15:39:16.349][0001] o.s.b.SpringApplication.logStartupProfileInfo(636) The following 1 profile is active: "uat"
+[15:39:17.333][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:39:17.437][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 91 ms. Found 2 JPA repository interfaces.
+[15:39:17.783][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:39:17.815][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[15:39:18.255][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[15:39:18.266][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[15:39:18.267][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[15:39:18.268][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[15:39:18.394][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[15:39:18.398][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 1954 ms
+[15:39:18.656][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:39:19.221][0001] c.z.h.p.HikariPool.checkFailFast(565) oracle - Added connection oracle.jdbc.driver.T4CConnection@10177794
+[15:39:19.227][0001] c.z.h.HikariDataSource.getConnection(123) oracle - Start completed.
+[15:39:19.290][0001] o.h.j.i.u.LogHelper.logPersistenceUnitInformation(31) HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:39:19.362][0001] o.h.Version.logVersion(44) HHH000412: Hibernate ORM core version 6.1.5.Final
+[15:39:19.549][0001] o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl.lambda$new$1(626) HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[15:39:19.714][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(66) HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[15:39:19.716][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(73) HHH90000026: Oracle10gDialect has been deprecated; use org.hibernate.dialect.OracleDialect instead
+[15:39:20.665][0001] o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService(51) HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[15:39:20.676][0001] o.s.o.j.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(437) Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:39:21.093][0001] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(227) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:39:21.514][0001] o.a.j.l.DirectJDKLog.log(173) Starting ProtocolHandler ["http-nio-9334"]
+[15:39:21.535][0001] o.s.b.w.e.t.TomcatWebServer.start(226) Tomcat started on port(s): 9334 (http) with context path '/figateway'
+[15:39:21.548][0001] o.s.b.StartupInfoLogger.logStarted(57) Started Application in 5.739 seconds (process running for 6.427)
+[15:39:44.785][0026] o.a.j.l.DirectJDKLog.log(173) Initializing Spring DispatcherServlet 'dispatcherServlet'
+[15:39:44.786][0026] o.s.w.s.FrameworkServlet.initServletBean(525) Initializing Servlet 'dispatcherServlet'
+[15:39:44.788][0026] o.s.w.s.FrameworkServlet.initServletBean(547) Completed initialization in 2 ms
+[15:39:44.998][0026] c.f.s.a.r.MicroAtmTransaction.transaction(91) message from middleware
+{"requestcode":"microBalEnqSbm","username":"AVI","password":"null","srno":"FSS00001","carddata":"55AD172C6FC3D968F8704C79D80C25EC1FD110FE767E4C47","pindata":"92D25921171DCEF7","amt":"0","imei":"63210519906377","imsi":"00","companyid":"com.sil.y1000pos","remark":"","reader":"EMV","tag55":"9F2608E72E57DA87254A799F10080105A000000400009F2701809F37043B703FCE9F3602012D950580000400009A032212299C01319F02060000000000005F2A020356820278009F1A0203569F03060000000000009F33036040009F34030200009F3501119F1E086D665F36306220208407A00000052410109F090200649F4104000000039B0268005F3401019F0607A00000052410109F0702AB804F07A0000005241010","mid":"FSS000000000001","sessionId":"aefb80be40d5d6ba5251b0bce876ab3b9f89fa8f36b6240fc2cc041513f3ef07","rrn":"236314244829","hmData":{"op":"MATM","imei":"63210519906377","mid":"FSS000000000001","imsi":"null","txnDispense":{"status":"1","txnid":"236313594394","typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":0},"updatedCashPosition":{"typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":20},"tid":"FSS00001","requestcode":"updateLts","username":"AVI"}}
+[15:39:44.998][0026] c.f.s.a.r.MicroAtmTransaction.transaction(117) creating balance request
+[15:39:45.065][0026] o.h.e.j.s.SqlStatementLogger.logStatement(128) 
+    select
+        u1_0.USER_ID,
+        u1_0.ADM_USER_ROLE_ID,
+        u1_0.APPROVED_BY,
+        u1_0.CREATED_ON,
+        u1_0.MODIFIED_ON,
+        u1_0.ONBOARDED_BY,
+        u1_0.PSWD_MDFD_DT,
+        u1_0.SEQ_ID,
+        u1_0.USER_EMAIL_ID,
+        u1_0.USER_MENU_GRP,
+        u1_0.USER_MOB_NMBR,
+        u1_0.USER_OLD_PASSWORD1,
+        u1_0.USER_OLD_PASSWORD2,
+        u1_0.USER_OLD_PASSWORD3,
+        u1_0.USER_PASSWORD,
+        u1_0.USER_PASSWORD_CNT,
+        u1_0.USER_PASSWORD_STATUS,
+        u1_0.USER_ROLE,
+        u1_0.USER_STATUS 
+    from
+        USER_ATHN_MSTR u1_0 
+    where
+        u1_0.USER_ID=?
+[15:39:45.101][0026] c.f.s.a.r.MicroAtmTransaction.transaction(166) 
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.populateRequest(MicroAtmTransaction.java:175)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.transaction(MicroAtmTransaction.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[15:40:03.142][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 19480 (D:\Workspaces\FSS\DBU_switch\target\classes started by X in D:\Workspaces\FSS\DBU_switch)
+[15:40:03.147][0001] o.s.b.SpringApplication.logStartupProfileInfo(636) The following 1 profile is active: "uat"
+[15:40:04.220][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:40:04.317][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 83 ms. Found 2 JPA repository interfaces.
+[15:40:04.685][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:40:04.719][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[15:40:05.713][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[15:40:05.724][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[15:40:05.726][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[15:40:05.728][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[15:40:05.899][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[15:40:05.906][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 2674 ms
+[15:40:06.183][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:40:06.675][0001] c.z.h.p.HikariPool.checkFailFast(565) oracle - Added connection oracle.jdbc.driver.T4CConnection@e5c2463
+[15:40:06.680][0001] c.z.h.HikariDataSource.getConnection(123) oracle - Start completed.
+[15:40:06.746][0001] o.h.j.i.u.LogHelper.logPersistenceUnitInformation(31) HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:40:06.813][0001] o.h.Version.logVersion(44) HHH000412: Hibernate ORM core version 6.1.5.Final
+[15:40:07.000][0001] o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl.lambda$new$1(626) HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[15:40:07.161][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(66) HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[15:40:07.163][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(73) HHH90000026: Oracle10gDialect has been deprecated; use org.hibernate.dialect.OracleDialect instead
+[15:40:08.097][0001] o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService(51) HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[15:40:08.111][0001] o.s.o.j.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(437) Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:40:08.480][0001] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(227) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:40:08.869][0001] o.a.j.l.DirectJDKLog.log(173) Starting ProtocolHandler ["http-nio-9334"]
+[15:40:08.895][0001] o.s.b.w.e.t.TomcatWebServer.start(226) Tomcat started on port(s): 9334 (http) with context path '/figateway'
+[15:40:08.908][0001] o.s.b.StartupInfoLogger.logStarted(57) Started Application in 6.268 seconds (process running for 6.951)
+[15:40:12.972][0026] o.a.j.l.DirectJDKLog.log(173) Initializing Spring DispatcherServlet 'dispatcherServlet'
+[15:40:12.972][0026] o.s.w.s.FrameworkServlet.initServletBean(525) Initializing Servlet 'dispatcherServlet'
+[15:40:12.974][0026] o.s.w.s.FrameworkServlet.initServletBean(547) Completed initialization in 1 ms
+[15:40:13.130][0026] c.f.s.a.r.MicroAtmTransaction.transaction(91) message from middleware
+{"requestcode":"microBalEnqSbm","username":"AVI","password":"null","srno":"FSS00001","carddata":"55AD172C6FC3D968F8704C79D80C25EC1FD110FE767E4C47","pindata":"92D25921171DCEF7","amt":"0","imei":"63210519906377","imsi":"00","companyid":"com.sil.y1000pos","remark":"","reader":"EMV","tag55":"9F2608E72E57DA87254A799F10080105A000000400009F2701809F37043B703FCE9F3602012D950580000400009A032212299C01319F02060000000000005F2A020356820278009F1A0203569F03060000000000009F33036040009F34030200009F3501119F1E086D665F36306220208407A00000052410109F090200649F4104000000039B0268005F3401019F0607A00000052410109F0702AB804F07A0000005241010","mid":"FSS000000000001","sessionId":"aefb80be40d5d6ba5251b0bce876ab3b9f89fa8f36b6240fc2cc041513f3ef07","rrn":"236314244829","hmData":{"op":"MATM","imei":"63210519906377","mid":"FSS000000000001","imsi":"null","txnDispense":{"status":"1","txnid":"236313594394","typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":0},"updatedCashPosition":{"typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":20},"tid":"FSS00001","requestcode":"updateLts","username":"AVI"}}
+[15:40:13.131][0026] c.f.s.a.r.MicroAtmTransaction.transaction(117) creating balance request
+[15:40:13.187][0026] o.h.e.j.s.SqlStatementLogger.logStatement(128) 
+    select
+        u1_0.USER_ID,
+        u1_0.ADM_USER_ROLE_ID,
+        u1_0.APPROVED_BY,
+        u1_0.CREATED_ON,
+        u1_0.MODIFIED_ON,
+        u1_0.ONBOARDED_BY,
+        u1_0.PSWD_MDFD_DT,
+        u1_0.SEQ_ID,
+        u1_0.USER_EMAIL_ID,
+        u1_0.USER_MENU_GRP,
+        u1_0.USER_MOB_NMBR,
+        u1_0.USER_OLD_PASSWORD1,
+        u1_0.USER_OLD_PASSWORD2,
+        u1_0.USER_OLD_PASSWORD3,
+        u1_0.USER_PASSWORD,
+        u1_0.USER_PASSWORD_CNT,
+        u1_0.USER_PASSWORD_STATUS,
+        u1_0.USER_ROLE,
+        u1_0.USER_STATUS 
+    from
+        USER_ATHN_MSTR u1_0 
+    where
+        u1_0.USER_ID=?
+[15:40:13.231][0026] c.f.s.a.r.MicroAtmTransaction.transaction(166) 
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.populateRequest(MicroAtmTransaction.java:175)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.transaction(MicroAtmTransaction.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+[15:40:49.205][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 1216 (D:\Workspaces\FSS\DBU_switch\target\classes started by X in D:\Workspaces\FSS\DBU_switch)
+[15:40:49.210][0001] o.s.b.SpringApplication.logStartupProfileInfo(636) The following 1 profile is active: "uat"
+[15:40:50.034][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[15:40:50.124][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 79 ms. Found 2 JPA repository interfaces.
+[15:40:50.464][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:40:50.493][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[15:40:50.949][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 9334 (http)
+[15:40:50.964][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-9334"]
+[15:40:50.966][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[15:40:50.967][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[15:40:51.089][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[15:40:51.092][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 1802 ms
+[15:40:51.360][0001] c.z.h.HikariDataSource.getConnection(110) oracle - Starting...
+[15:40:51.950][0001] c.z.h.p.HikariPool.checkFailFast(565) oracle - Added connection oracle.jdbc.driver.T4CConnection@87d9a01
+[15:40:51.953][0001] c.z.h.HikariDataSource.getConnection(123) oracle - Start completed.
+[15:40:52.028][0001] o.h.j.i.u.LogHelper.logPersistenceUnitInformation(31) HHH000204: Processing PersistenceUnitInfo [name: default]
+[15:40:52.085][0001] o.h.Version.logVersion(44) HHH000412: Hibernate ORM core version 6.1.5.Final
+[15:40:52.272][0001] o.h.b.i.MetadataBuilderImpl$MetadataBuildingOptionsImpl.lambda$new$1(626) HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[15:40:52.421][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(66) HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[15:40:52.422][0001] o.h.e.j.d.i.DialectFactoryImpl.logSelectedDialect(73) HHH90000026: Oracle10gDialect has been deprecated; use org.hibernate.dialect.OracleDialect instead
+[15:40:53.493][0001] o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService(51) HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[15:40:53.507][0001] o.s.o.j.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(437) Initialized JPA EntityManagerFactory for persistence unit 'default'
+[15:40:53.884][0001] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor(227) spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[15:40:54.267][0001] o.a.j.l.DirectJDKLog.log(173) Starting ProtocolHandler ["http-nio-9334"]
+[15:40:54.288][0001] o.s.b.w.e.t.TomcatWebServer.start(226) Tomcat started on port(s): 9334 (http) with context path '/figateway'
+[15:40:54.300][0001] o.s.b.StartupInfoLogger.logStarted(57) Started Application in 5.569 seconds (process running for 6.322)
+[15:40:58.131][0026] o.a.j.l.DirectJDKLog.log(173) Initializing Spring DispatcherServlet 'dispatcherServlet'
+[15:40:58.132][0026] o.s.w.s.FrameworkServlet.initServletBean(525) Initializing Servlet 'dispatcherServlet'
+[15:40:58.133][0026] o.s.w.s.FrameworkServlet.initServletBean(547) Completed initialization in 1 ms
+[15:40:58.346][0026] c.f.s.a.r.MicroAtmTransaction.transaction(91) message from middleware
+{"requestcode":"microBalEnqSbm","username":"AVI","password":"null","srno":"FSS00001","carddata":"55AD172C6FC3D968F8704C79D80C25EC1FD110FE767E4C47","pindata":"92D25921171DCEF7","amt":"0","imei":"63210519906377","imsi":"00","companyid":"com.sil.y1000pos","remark":"","reader":"EMV","tag55":"9F2608E72E57DA87254A799F10080105A000000400009F2701809F37043B703FCE9F3602012D950580000400009A032212299C01319F02060000000000005F2A020356820278009F1A0203569F03060000000000009F33036040009F34030200009F3501119F1E086D665F36306220208407A00000052410109F090200649F4104000000039B0268005F3401019F0607A00000052410109F0702AB804F07A0000005241010","mid":"FSS000000000001","sessionId":"aefb80be40d5d6ba5251b0bce876ab3b9f89fa8f36b6240fc2cc041513f3ef07","rrn":"236314244829","hmData":{"op":"MATM","imei":"63210519906377","mid":"FSS000000000001","imsi":"null","txnDispense":{"status":"1","txnid":"236313594394","typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":0},"updatedCashPosition":{"typedenom1":2000,"typedenom1count":0,"typedenom2":500,"typedenom2count":0,"typedenom3":200,"typedenom3count":0,"typedenom4":100,"typedenom4count":20},"tid":"FSS00001","requestcode":"updateLts","username":"AVI"}}
+[15:40:58.347][0026] c.f.s.a.r.MicroAtmTransaction.transaction(117) creating balance request
+[15:40:58.351][0026] c.f.s.a.r.MicroAtmTransaction.translatePinblock(249) clearPin : 041188eeefdf89a9
+[15:40:58.418][0026] o.h.e.j.s.SqlStatementLogger.logStatement(128) 
+    select
+        u1_0.USER_ID,
+        u1_0.ADM_USER_ROLE_ID,
+        u1_0.APPROVED_BY,
+        u1_0.CREATED_ON,
+        u1_0.MODIFIED_ON,
+        u1_0.ONBOARDED_BY,
+        u1_0.PSWD_MDFD_DT,
+        u1_0.SEQ_ID,
+        u1_0.USER_EMAIL_ID,
+        u1_0.USER_MENU_GRP,
+        u1_0.USER_MOB_NMBR,
+        u1_0.USER_OLD_PASSWORD1,
+        u1_0.USER_OLD_PASSWORD2,
+        u1_0.USER_OLD_PASSWORD3,
+        u1_0.USER_PASSWORD,
+        u1_0.USER_PASSWORD_CNT,
+        u1_0.USER_PASSWORD_STATUS,
+        u1_0.USER_ROLE,
+        u1_0.USER_STATUS 
+    from
+        USER_ATHN_MSTR u1_0 
+    where
+        u1_0.USER_ID=?
+[15:40:58.462][0026] c.f.s.a.r.MicroAtmTransaction.transaction(166) 
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.populateRequest(MicroAtmTransaction.java:175)
+	at com.fss.saber.adapter.rest.MicroAtmTransaction.transaction(MicroAtmTransaction.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1003)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:906)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)

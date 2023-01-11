@@ -1,0 +1,90 @@
+[17:28:03.066][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 8888 (D:\WorkSpaces\FSS\saber.adapter\target\classes started by X in D:\WorkSpaces\FSS\saber.adapter)
+[17:28:03.080][0001] o.s.b.SpringApplication.logStartupProfileInfo(630) No active profile set, falling back to 1 default profile: "default"
+[17:28:04.521][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(138) Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[17:28:04.568][0001] o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn(208) Finished Spring Data repository scanning in 33 ms. Found 0 JPA repository interfaces.
+[17:28:05.056][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[17:28:05.121][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[17:28:05.865][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 8080 (http)
+[17:28:05.935][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-8080"]
+[17:28:05.936][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[17:28:05.937][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[17:28:06.246][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[17:28:06.252][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 3058 ms
+[17:28:06.382][0001] o.s.c.s.AbstractApplicationContext.refresh(592) Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: oracle.jdbc.OracleDriver
+[17:28:06.388][0001] o.a.j.l.DirectJDKLog.log(173) Stopping service [Tomcat]
+[17:28:06.453][0001] o.s.b.a.l.ConditionEvaluationReportLogger.logMessage(82) 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[17:28:06.499][0001] o.s.b.SpringApplication.reportFailure(820) Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: oracle.jdbc.OracleDriver
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:793)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:905)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.fss.saber.adapter.Application.main(Application.java:16)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: oracle.jdbc.OracleDriver
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:652)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:640)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:880)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:784)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Cannot load driver class: oracle.jdbc.OracleDriver
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	... 35 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot load driver class: oracle.jdbc.OracleDriver
+	at org.springframework.util.Assert.state(Assert.java:97)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:171)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.initializeDataSourceBuilder(DataSourceProperties.java:123)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:48)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:90)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
+	... 36 common frames omitted
+[17:37:38.782][0001] o.s.b.StartupInfoLogger.logStarting(51) Starting Application using Java 17.0.2 with PID 7868 (D:\WorkSpaces\FSS\saber.adapter\target\classes started by X in D:\WorkSpaces\FSS\saber.adapter)
+[17:37:38.800][0001] o.s.b.SpringApplication.logStartupProfileInfo(630) No active profile set, falling back to 1 default profile: "default"
+[17:37:39.936][0001] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(409) Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[17:37:40.038][0001] o.s.w.s.a.s.AbstractAddressingEndpointMapping.afterPropertiesSet(239) Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+[17:37:40.929][0001] o.s.b.w.e.t.TomcatWebServer.initialize(114) Tomcat initialized with port(s): 8080 (http)
+[17:37:40.951][0001] o.a.j.l.DirectJDKLog.log(173) Initializing ProtocolHandler ["http-nio-8080"]
+[17:37:40.953][0001] o.a.j.l.DirectJDKLog.log(173) Starting service [Tomcat]
+[17:37:40.954][0001] o.a.j.l.DirectJDKLog.log(173) Starting Servlet engine: [Apache Tomcat/10.1.1]
+[17:37:41.415][0001] o.a.j.l.DirectJDKLog.log(173) Initializing Spring embedded WebApplicationContext
+[17:37:41.421][0001] o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext(291) Root WebApplicationContext: initialization completed in 2535 ms
+[17:37:42.077][0001] o.a.j.l.DirectJDKLog.log(173) Starting ProtocolHandler ["http-nio-8080"]
+[17:37:42.178][0001] o.s.b.w.e.t.TomcatWebServer.start(226) Tomcat started on port(s): 8080 (http) with context path ''
+[17:37:42.210][0001] o.s.b.StartupInfoLogger.logStarted(57) Started Application in 4.092 seconds (process running for 5.238)
+[17:39:14.166][0022] o.a.j.l.DirectJDKLog.log(173) Initializing Spring DispatcherServlet 'dispatcherServlet'
+[17:39:14.169][0022] o.s.w.s.FrameworkServlet.initServletBean(525) Initializing Servlet 'dispatcherServlet'
+[17:39:14.186][0022] o.s.w.s.FrameworkServlet.initServletBean(547) Completed initialization in 9 ms
